@@ -1,4 +1,4 @@
-package com.dsa.java.Recursion.Sum_of_N_006;
+package com.dsa.java.Recursion.Sum_of_N_001;
 
 import java.time.Duration;
 import java.time.Instant;
