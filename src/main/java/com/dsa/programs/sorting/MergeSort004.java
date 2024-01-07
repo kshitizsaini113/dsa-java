@@ -3,7 +3,7 @@ package com.dsa.programs.sorting;
 import java.util.Arrays;
 
 public class MergeSort004 {
-    public static void mergeSort(int arr[], int low, int high) {
+    public static void mergeSort(int[] arr, int low, int high) {
         if (low < high) {
             int mid = low + (high - low) / 2;
             mergeSort(arr, low, mid);
@@ -12,7 +12,7 @@ public class MergeSort004 {
         }
     }
 
-    public static void merge(int arr[], int low, int mid, int high) {
+    public static void merge(int[] arr, int low, int mid, int high) {
         int[] tempArr = new int[high-low+1];
         int idx = 0;
         int left = low;
@@ -38,7 +38,6 @@ public class MergeSort004 {
             right++;
             idx++;
         }
-        System.out.println(Arrays.toString(tempArr));
         for(int i=0; i<idx; i++) {
             arr[i+low] = tempArr[i];
         }
