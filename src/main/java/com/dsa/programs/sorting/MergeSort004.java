@@ -3,18 +3,16 @@ package com.dsa.programs.sorting;
 import java.util.Arrays;
 
 public class MergeSort004 {
-    public static void sort(int arr[], int low, int high)
-    {
+    public static void mergeSort(int arr[], int low, int high) {
         if (low < high) {
             int mid = low + (high - low) / 2;
-            sort(arr, low, mid);
-            sort(arr, mid + 1, high);
+            mergeSort(arr, low, mid);
+            mergeSort(arr, mid + 1, high);
             merge(arr, low, mid, high);
         }
     }
 
-    public static void merge(int arr[], int low, int mid, int high)
-    {
+    public static void merge(int arr[], int low, int mid, int high) {
         int[] tempArr = new int[high-low+1];
         int idx = 0;
         int left = low;
@@ -49,7 +47,7 @@ public class MergeSort004 {
     public static void main(String[] args) {
         int[] arr = new int[]{9, 5,1, 3, 6, 2, 7, 1 ,4};
         System.out.println(Arrays.toString(arr));
-        sort(arr, 0, arr.length-1);
+        mergeSort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
 }
